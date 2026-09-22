@@ -299,6 +299,59 @@ st.markdown("""
     .auth-form-card .stFormSubmitButton > button { min-height:46px; font-size:.95rem; }
     @media (max-width:700px) { .brand-header { padding:18px !important; } .brand-title { font-size:1.55rem !important; } .page-hero { padding:18px !important; } }
 
+
+    /* Streamlit Cloud compatibility: force readable text in light main area. */
+    [data-testid="stAppViewContainer"],
+    [data-testid="stAppViewContainer"] * {
+        --main-text: #17324d;
+    }
+    [data-testid="stAppViewContainer"] .stMarkdown,
+    [data-testid="stAppViewContainer"] .stMarkdown p,
+    [data-testid="stAppViewContainer"] .stMarkdown li,
+    [data-testid="stAppViewContainer"] [data-testid="stWidgetLabel"] p,
+    [data-testid="stAppViewContainer"] label,
+    [data-testid="stAppViewContainer"] legend,
+    [data-testid="stAppViewContainer"] [role="radiogroup"] label,
+    [data-testid="stAppViewContainer"] [role="radio"] p,
+    [data-testid="stAppViewContainer"] [role="tab"] {
+        color: #17324d !important;
+        -webkit-text-fill-color: #17324d !important;
+        opacity: 1 !important;
+    }
+    [data-testid="stAppViewContainer"] [data-testid="stWidgetLabel"] p,
+    [data-testid="stAppViewContainer"] .stDateInput label,
+    [data-testid="stAppViewContainer"] .stTextInput label,
+    [data-testid="stAppViewContainer"] .stNumberInput label,
+    [data-testid="stAppViewContainer"] .stSelectbox label,
+    [data-testid="stAppViewContainer"] .stRadio label {
+        color: #36566a !important;
+        -webkit-text-fill-color: #36566a !important;
+    }
+    [data-testid="stAppViewContainer"] [data-testid="stTabs"] [role="tab"] {
+        color: #557080 !important;
+        -webkit-text-fill-color: #557080 !important;
+        background: transparent !important;
+    }
+    [data-testid="stAppViewContainer"] [data-testid="stTabs"] [role="tab"][aria-selected="true"] {
+        color: #087f73 !important;
+        -webkit-text-fill-color: #087f73 !important;
+        background: #ffffff !important;
+    }
+    [data-testid="stAppViewContainer"] input,
+    [data-testid="stAppViewContainer"] textarea {
+        color: #17324d !important;
+        -webkit-text-fill-color: #17324d !important;
+        background: #ffffff !important;
+    }
+    [data-testid="stAppViewContainer"] [data-baseweb="select"] * {
+        color: #17324d !important;
+        -webkit-text-fill-color: #17324d !important;
+    }
+    [data-testid="stAppViewContainer"] [role="radio"] {
+        color: #17324d !important;
+        opacity: 1 !important;
+    }
+
 </style>
 """, unsafe_allow_html=True)
 
